@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Page Call</title>
+    <meta name="description" content="Page Call">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../resources/main.css">
+    <script src="../resources/viewhelpers.js"></script>
+    <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div id="content"></div>
+    <div id="event-data-form">
+        <form class="p-3">
+            <fieldset class="p-3 scheduler-border">
+                <legend id="g_name" class="scheduler-border">Name</legend>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="name">Page Name</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="fa-i" data-de="name">
+                        <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="p-3 scheduler-border">
+                <legend id="g_props" class="scheduler-border">Properties</legend>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="path">Path</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="path">
+                    </div>
+                    <div class="fa-i" data-de="path">
+                        <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="url">URL</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="url">
+                    </div>
+                    <div class="fa-i" data-de="url">
+                        <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="title">Title</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <div class="fa-i" data-de="title">
+                        <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="p-3 scheduler-border">
+                <legend id="g_other_ids" class="scheduler-border">Other IDs</legend>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="visitor_id">Visitor ID</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="visitor_id">
+                    </div>
+                    <div class="fa-i" data-de="visitor_id">
+                        <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="email">Email</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="fa-i" data-de="email">
+                        <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="phone">Phone</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                    <div class="fa-i" data-de="phone">
+                        <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="crmid">CRM ID</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="crmid">
+                    </div>
+                    <div class="fa-i" data-de="crmid">
+                        <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        deStuff();
+    </script>
+</div>
+
+<script>
+    window.extensionBridge.register({
+        init: function (info) {
+            console.log("Init");
+            console.log(info);
+            if (info.settings) {
+                // Populate form values from persisted settings.
+                document.getElementById('name').value = info.settings.g_name.name || '';
+                document.getElementById('url').value = info.settings.g_props.url || '';
+                document.getElementById('path').value = info.settings.g_props.path || '';
+                document.getElementById('title').value = info.settings.g_props.title || '';
+                document.getElementById('visitor_id').value = info.settings.g_id.visitor_id || '';
+                document.getElementById('email').value = info.settings.g_id.email || '';
+                document.getElementById('phone').value = info.settings.g_id.phone || '';
+                document.getElementById('crmid').value = info.settings.g_id.crmid || '';
+            }
+        },
+
+        getSettings: function () {
+            // Return settings object from form values.
+            return {
+                'g_name': {name: document.getElementById('name').value || ''},
+                'g_props': {
+                    url: document.getElementById('url').value || '',
+                    path: document.getElementById('path').value || '',
+                    title: document.getElementById('title').value || ''
+                },
+                'g_id': {
+                    visitor_id: document.getElementById('visitor_id').value || '',
+                    email: document.getElementById('email').value || '',
+                    phone: document.getElementById('phone').value || '',
+                    crmid: document.getElementById('crmid').value || ''
+                 }
+            };
+        },
+
+        validate: function () {
+            return true;
+        }
+    });
+</script>
+</body>
+
+</html>

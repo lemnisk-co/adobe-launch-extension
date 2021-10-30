@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Track Action</title>
+  <meta name="description" content="Track Action">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../resources/main.css">
+  <script src="../resources/viewhelpers.js"></script>
+  <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <div id="content"></div>
+  <div id="event-data-form">
+    <form class="p-3">
+      <fieldset class="p-3 scheduler-border">
+        <legend id="g_event" class="scheduler-border">Event Name</legend>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="event">Event Name</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="event">
+          </div>
+          <div class="fa-i" data-de="event">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="p-3 scheduler-border">
+        <legend id="g_props" class="scheduler-border">Properties</legend>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop1">Prop-1</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop1">
+          </div>
+          <div class="fa-i" data-de="prop1">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop2">Prop-2</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop2">
+          </div>
+          <div class="fa-i" data-de="prop2">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop3">Prop-3</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop3">
+          </div>
+          <div class="fa-i" data-de="prop3">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop4">Prop-4</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop4">
+          </div>
+          <div class="fa-i" data-de="prop4">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop5">Prop-5</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop5">
+          </div>
+          <div class="fa-i" data-de="prop5">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop6">Prop-6</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop6">
+          </div>
+          <div class="fa-i" data-de="prop6">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop7">Prop-7</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop7">
+          </div>
+          <div class="fa-i" data-de="prop7">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop8">Prop-8</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop8">
+          </div>
+          <div class="fa-i" data-de="prop8">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop9">Prop-9</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop9">
+          </div>
+          <div class="fa-i" data-de="prop9">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop10">Prop-10</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop10">
+          </div>
+          <div class="fa-i" data-de="prop10">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop11">Prop-11</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop11">
+          </div>
+          <div class="fa-i" data-de="prop11">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop12">Prop-12</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop12">
+          </div>
+          <div class="fa-i" data-de="prop12">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop13">Prop-13</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop13">
+          </div>
+          <div class="fa-i" data-de="prop13">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop14">Prop-14</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop14">
+          </div>
+          <div class="fa-i" data-de="prop14">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="prop15">Prop-15</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="prop15">
+          </div>
+          <div class="fa-i" data-de="prop15">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="p-3 scheduler-border">
+        <legend id="g_other_ids" class="scheduler-border">Other IDs</legend>
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label" for="visitor_id">Visitor ID</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="visitor_id">
+            </div>
+            <div class="fa-i" data-de="visitor_id">
+                <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="email">Email</label>
+          <div class="col-sm-5">
+              <input type="text" class="form-control" id="email">
+          </div>
+          <div class="fa-i" data-de="email">
+              <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="phone">Phone</label>
+          <div class="col-sm-5">
+              <input type="text" class="form-control" id="phone">
+          </div>
+          <div class="fa-i" data-de="phone">
+              <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="crmid">CRM ID</label>
+          <div class="col-sm-5">
+              <input type="text" class="form-control" id="crmid">
+          </div>
+          <div class="fa-i" data-de="crmid">
+              <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+    </fieldset>
+
+    </form>
+  </div>
+
+  <script>
+    deStuff();
+  </script>
+</div>
+
+<script>
+  window.extensionBridge.register({
+    init: function (info) {
+      if (info.settings) {
+        // Populate form values from persisted settings.
+        document.getElementById('event').value = info.settings.g_event.event || '';
+        document.getElementById('prop1').value = info.settings.g_props.prop1 || '';
+        document.getElementById('prop2').value = info.settings.g_props.prop2 || '';
+        document.getElementById('prop3').value = info.settings.g_props.prop3 || '';
+        document.getElementById('prop4').value = info.settings.g_props.prop4 || '';
+        document.getElementById('prop5').value = info.settings.g_props.prop5 || '';
+        document.getElementById('prop6').value = info.settings.g_props.prop6 || '';
+        document.getElementById('prop7').value = info.settings.g_props.prop7 || '';
+        document.getElementById('prop8').value = info.settings.g_props.prop8 || '';
+        document.getElementById('prop9').value = info.settings.g_props.prop9 || '';
+        document.getElementById('prop10').value = info.settings.g_props.prop10 || '';
+        document.getElementById('prop11').value = info.settings.g_props.prop11 || '';
+        document.getElementById('prop12').value = info.settings.g_props.prop12 || '';
+        document.getElementById('prop13').value = info.settings.g_props.prop13 || '';
+        document.getElementById('prop14').value = info.settings.g_props.prop14 || '';
+        document.getElementById('prop15').value = info.settings.g_props.prop15 || '';
+        document.getElementById('visitor_id').value = info.settings.g_id.visitor_id || '';
+        document.getElementById('email').value = info.settings.g_id.email || '';
+        document.getElementById('phone').value = info.settings.g_id.phone || '';
+        document.getElementById('crmid').value = info.settings.g_id.crmid || '';
+
+      }
+    },
+
+    getSettings: function () {
+      // Return settings object from form values.
+      return {
+        'g_event': {event: document.getElementById('event').value || ''},
+        'g_props': {
+          prop1: document.getElementById('prop1').value || '',
+          prop2: document.getElementById('prop2').value || '',
+          prop3: document.getElementById('prop3').value || '',
+          prop4: document.getElementById('prop4').value || '',
+          prop5: document.getElementById('prop5').value || '',
+          prop6: document.getElementById('prop6').value || '',
+          prop7: document.getElementById('prop7').value || '',
+          prop8: document.getElementById('prop8').value || '',
+          prop9: document.getElementById('prop9').value || '',
+          prop10: document.getElementById('prop10').value || '',
+          prop11: document.getElementById('prop11').value || '',
+          prop12: document.getElementById('prop12').value || '',
+          prop13: document.getElementById('prop13').value || '',
+          prop14: document.getElementById('prop14').value || '',
+          prop15: document.getElementById('prop15').value || ''
+        },
+        'g_id': {
+          visitor_id: document.getElementById('visitor_id').value || '',
+          email: document.getElementById('email').value || '',
+          phone: document.getElementById('phone').value || '',
+          crmid: document.getElementById('crmid').value || ''
+        }
+      };
+    },
+
+    validate: function () {
+      return true;
+    }
+  });
+</script>
+</body>
+
+</html>
