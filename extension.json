@@ -1,6 +1,6 @@
 {
   "displayName": "Lemnisk AIA",
-  "name": "lemnisk-aia",
+  "name": "lemnisk-aia-all",
   "platform": "web",
   "version": "1.0.3",
   "description": "Lemnisk pixel listener for capturing customer behaviour",
