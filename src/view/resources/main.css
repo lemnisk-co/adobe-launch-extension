@@ -49,3 +49,7 @@ legend.scheduler-border {
     padding:0 10px;
     border-bottom:none;
 }
+.paddingLeftRight {
+  padding-left:0px;
+  padding-right:0px;
+}

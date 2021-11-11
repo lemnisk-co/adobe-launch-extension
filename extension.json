@@ -2,7 +2,7 @@
   "displayName": "Lemnisk AIA",
   "name": "lemnisk-aia-all",
   "platform": "web",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Lemnisk pixel listener for capturing customer behaviour",
   "iconPath": "resources/icons/lemnisk.svg",
   "author": {
@@ -46,15 +46,15 @@
       "viewPath": "actions/page.html"
     },
     {
-      "displayName": "Identity",
-      "name": "identity",
+      "displayName": "Identify",
+      "name": "identify",
       "schema": {
         "$schema": "http://json-schema.org/draft-04/schema#",
         "type": "object",
         "properties": {}
       },
-      "libPath": "src/lib/actions/identity.js",
-      "viewPath": "actions/identity.html"
+      "libPath": "src/lib/actions/identify.js",
+      "viewPath": "actions/identify.html"
     },
     {
       "displayName": "Track",
