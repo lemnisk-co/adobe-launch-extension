@@ -80,6 +80,15 @@
                         <span class="fa fa-database fa-lg" aria-hidden="true"></span>
                     </div>
                 </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="campaign_id">Campaign Id</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="campaign_id">
+                    </div>
+                    <div class="fa-i" data-de="campaign_id">
+                        <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+                    </div>
+                </div>
             </fieldset>
             <fieldset class="p-3 scheduler-border">
                 <legend id="g_other_ids" class="scheduler-border">Other IDs</legend>
@@ -232,7 +241,7 @@
 <script>
     window.extensionBridge.register({
         otherIdsKey: ["visitor_id","email","phone","crmid","tel","memberNumber"],
-        propsKey: ["url","path","title","referrer","search"],
+        propsKey: ["url","path","title","referrer","search", "campaign_id"],
         idsMapping: {},
         init: function (info) {
             if (info.settings) {

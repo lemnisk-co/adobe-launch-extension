@@ -35,6 +35,15 @@
       <fieldset class="p-3 scheduler-border">
         <legend id="g_props" class="scheduler-border">Properties</legend>
         <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="title">Title</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="title">
+          </div>
+          <div class="fa-i" data-de="title">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="form-group row">
           <label class="col-sm-4 col-form-label" for="fullName">Full Name</label>
           <div class="col-sm-5">
             <input type="text" class="form-control" id="fullName">
@@ -67,6 +76,15 @@
             <input type="text" class="form-control" id="gender">
           </div>
           <div class="fa-i" data-de="gender">
+            <span class="fa fa-database fa-lg" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" for="dob">DOB</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="dob">
+          </div>
+          <div class="fa-i" data-de="dob">
             <span class="fa fa-database fa-lg" aria-hidden="true"></span>
           </div>
         </div>
@@ -250,7 +268,7 @@
 <script>
   window.extensionBridge.register({
     otherIdsKey: ["visitor_id","email","phone","crmid","tel","memberNumber"],
-    propsKey: ["fullName","firstName","lastName","gender","age","address","province"],
+    propsKey: ["title","fullName","firstName","lastName","gender","dob","age","address","province"],
     idsMapping: {},
     init: function (info) {
       if (info.settings) {
@@ -261,14 +279,14 @@
           document.getElementById(props).value =info.settings.g_props[props];
         }
         // initializing otherids for page method
-        for (var otherIds in info.settings.g_id){
+        for (var otherIds in info.settings.g_other_ids){
           if(this.otherIdsKey.includes(otherIds)){
-            document.getElementById(otherIds).value = info.settings.g_id[otherIds];
+            document.getElementById(otherIds).value = info.settings.g_other_ids[otherIds];
           }
         }
         for(var ids in info.settings.g_init_ids){
           document.getElementById(info.settings.g_init_ids[ids].propKeyFieldId).value = info.settings.g_init_ids[ids].propKeyValue;
-          document.getElementById(info.settings.g_init_ids[ids].propValueFieldId).value = info.settings.g_id[ids];
+          document.getElementById(info.settings.g_init_ids[ids].propValueFieldId).value = info.settings.g_other_ids[ids];
         }
       }
     },
