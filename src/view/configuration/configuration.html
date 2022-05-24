@@ -31,7 +31,6 @@
         },
 
         getSettings: function () {
-            console.log("Get settings "+writeKeyIp.value)
             return {
                 writeKey: writeKeyIp.value,
                 clientId: clientId.value
@@ -41,7 +40,6 @@
         validate: function () {
             var isValid = writeKeyIp.value.length === 20;
             writeKeyIp.invalid = !isValid;
-            console.log("Validating "+isValid)
             return isValid;
         }
     });
