@@ -1,6 +1,6 @@
 {
-  "displayName": "Lemnisk AIA",
-  "name": "lemnisk-aia-group",
+  "displayName": "Lemnisk TALIC",
+  "name": "lemnisk-tata-aia",
   "platform": "web",
   "version": "1.0.8",
   "description": "Lemnisk pixel listener for capturing customer behaviour",
